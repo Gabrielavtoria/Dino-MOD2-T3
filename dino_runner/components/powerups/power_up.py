@@ -1,16 +1,17 @@
-from email.mime import image
 import random
-from pygame.sprite import sprite
+from pygame.sprite import Sprite
+
 from dino_runner.utils.constants import SCREEN_WIDTH
 
 
-class PowerUp(sprite):
-    def __init__(self, image, type):
+class PowerUp(Sprite):
+    def _init_(self, image, type):
         self.image = image
         self.type = type
         self.rect = self.image.get_rect()
-        self.rect.x =   SCREEN_WIDTH + random.randint(800, 1000)
+        self.rect.x = SCREEN_WIDTH + random.randint(800, 1000)
         self.rect.y = random.randint(125, 175)
+
         self.start_time = 0
         self.duration = random.randint(5, 10)
 
@@ -20,4 +21,4 @@ class PowerUp(sprite):
             power_ups.pop()
 
     def draw(self, screen):
-        screen.blit(self.image, self.rect)           
+        screen.blit(self.image, self.rect)      
