@@ -13,7 +13,7 @@ JUMP_VEL = 8.5
 
 
 class Dinosaur(Sprite):
-    def _init_(self):
+    def __init__(self):
         self.type = DEFAULT_TYPE
         self.image = RUN_IMG[self.type][0]
         self.dino_rect = self.image.get_rect()

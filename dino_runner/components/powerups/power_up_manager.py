@@ -5,7 +5,7 @@ from dino_runner.components.powerups.shield import Shield
 
 
 class PowerUpManager:
-    def _init_(self):
+    def __init__(self):
         self.power_ups = []
         self.when_appears = 0
 
