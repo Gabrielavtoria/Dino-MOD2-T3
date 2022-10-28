@@ -85,7 +85,7 @@ class Game:
             self.x_pos_bg = 0
             self.x_pos_bg -= self.game_speed
 
-    def draw_scrore(self):              ##pontuação que aparece
+    def draw_score(self):              ##pontuação que aparece
         draw_message_component(
             f'SCORE: {self.score}',
             self.screen,
